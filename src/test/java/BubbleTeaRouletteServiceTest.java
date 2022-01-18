@@ -6,6 +6,7 @@ import testhelper.RandomStub;
 
 import static org.junit.Assert.assertEquals;
 
+
 public class BubbleTeaRouletteServiceTest {
 
     @Test
@@ -23,4 +24,18 @@ public class BubbleTeaRouletteServiceTest {
         assertEquals(expectedResult, actualResult);
 
     }
+
+    @Test
+    public void shouldReturnPeachIceTeaWhenGetRandomBubbleTeaTypeIsCalled(){
+
+        //Arrange
+        RandomStub rs = new RandomStub(BubbleTeaTypeEnum.PeachIceTea.ordinal());
+        BubbleTeaRouletteService bs = new BubbleTeaRouletteService(rs);
+
+        //Act & Assert
+        assertEquals(BubbleTeaTypeEnum.PeachIceTea,bs.getRandomBubbleTeaType());
+
+    }
+
+
 }
