@@ -7,6 +7,7 @@ import testhelper.RandomStub;
 import static org.junit.Assert.assertEquals;
 import java.util.Collection.*;
 import org.junit.Assert;
+import org.junit.runners.Parameterized.Parameters;
 import org.junit.jupiter.ParameterizedTest;
 
 public class BubbleTeaRouletteServiceTest {
@@ -44,6 +45,7 @@ public class BubbleTeaRouletteServiceTest {
     public void testMultipleDifferentBubbleTeaRequests(){
 
         @ParameterizedTest
+        @EnumSource(BubbleTeaTypeEnum.class)
 
 //        BubbleTeaTypeEnum.Stream.of(BubbleTeaTypeEnum.values()).forEach(System.out::println);
         }
