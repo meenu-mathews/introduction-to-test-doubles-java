@@ -1,11 +1,13 @@
 import com.techreturners.bubbleteaordersystem.service.BubbleTeaRouletteService;
 import com.techreturners.bubbleteaordersystem.model.BubbleTeaTypeEnum;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import testhelper.RandomStub;
 
 import static org.junit.Assert.assertEquals;
-
+import java.util.Collection.*;
+import org.junit.Assert;
+import org.junit.jupiter.ParameterizedTest;
 
 public class BubbleTeaRouletteServiceTest {
 
@@ -37,5 +39,14 @@ public class BubbleTeaRouletteServiceTest {
 
     }
 
+    @Test
 
+    public void testMultipleDifferentBubbleTeaRequests(){
+
+        @ParameterizedTest
+
+//        BubbleTeaTypeEnum.Stream.of(BubbleTeaTypeEnum.values()).forEach(System.out::println);
+        }
+
+    }
 }
