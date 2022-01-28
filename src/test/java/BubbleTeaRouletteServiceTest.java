@@ -2,13 +2,14 @@ import com.techreturners.bubbleteaordersystem.service.BubbleTeaRouletteService;
 import com.techreturners.bubbleteaordersystem.model.BubbleTeaTypeEnum;
 
 import org.junit.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.EnumSource;
 import testhelper.RandomStub;
 
 import static org.junit.Assert.assertEquals;
 import java.util.Collection.*;
 import org.junit.Assert;
 import org.junit.runners.Parameterized.Parameters;
-import org.junit.jupiter.ParameterizedTest;
 
 public class BubbleTeaRouletteServiceTest {
 
@@ -47,6 +48,8 @@ public class BubbleTeaRouletteServiceTest {
         @ParameterizedTest
         @EnumSource(BubbleTeaTypeEnum.class)
 
+
+        }
 //        BubbleTeaTypeEnum.Stream.of(BubbleTeaTypeEnum.values()).forEach(System.out::println);
         }
 
